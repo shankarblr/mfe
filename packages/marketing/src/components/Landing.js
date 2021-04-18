@@ -96,7 +96,7 @@ export default function Album() {
                 <Grid item>
                   <Link to='/pricing'>
                     <Button variant='contained' color='primary'>
-                      Homes
+                      Home
                     </Button>
                   </Link>
                 </Grid>
