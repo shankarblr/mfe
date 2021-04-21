@@ -3,8 +3,11 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const commmonConfig = require('./webpack.common')
 const packageJson = require('../package.json')
 
-const devServer = {
+const devConfig = {
   mode: 'development',
+  output: {
+    publicPath: 'http://localhost:8002/',
+  },
   devServer: {
     port: 8002,
     historyApiFallback: {
@@ -18,10 +21,9 @@ const devServer = {
       exposes: {
         './MarketingApp': './src/bootstrap',
       },
-      shared: packageJson.dependencies, 
+      shared: packageJson.dependencies,
     }),
-   
   ],
 }
 
-module.exports = merge(commmonConfig, devServer)
+module.exports = merge(commmonConfig, devConfig)
