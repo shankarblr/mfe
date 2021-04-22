@@ -19,6 +19,7 @@ const devServer = {
       name: 'container',
       remotes: {
         marketing: 'marketing@http://localhost:8002/remoteEntry.js',
+        auth: 'auth@http://localhost:8003/remoteEntry.js',
       },
       shared: packageJson.dependencies,
     }),
