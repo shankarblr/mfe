@@ -11,7 +11,7 @@ const devServer = {
   devServer: {
     port: 8001,
     historyApiFallback: {
-      index: 'index.html',
+      index: 'http://localhost:8001/index.html',
     },
   },
   plugins: [
@@ -20,6 +20,7 @@ const devServer = {
       remotes: {
         marketing: 'marketing@http://localhost:8002/remoteEntry.js',
         auth: 'auth@http://localhost:8003/remoteEntry.js',
+        dashboard: 'dashboard@http://localhost:8004/remoteEntry.js',
       },
       shared: packageJson.dependencies,
     }),
